@@ -1,0 +1,16 @@
+
+cd('undergraduate_proj/major/DR')
+bencan = dataset('File','breast_cancer.csv','Delimiter',',')
+
+#returns a matrix with two columns using PCA
+mapped_data_PCA = compute_mapping(bencan, PCA, 2) 
+
+#returns a matrix with two columns using LDA
+mapped_data_LDA = compute_mapping(bencan, LDA, 2)
+
+#returns a matrix with two columns using FA
+mapped_data_FA = compute_mapping(bencan, FA, 2)
+
+#returns a matrix with two columns using MDS
+mapped_data_MDS = compute_mapping(bencan, MDS, 2)
+

@@ -1,0 +1,43 @@
+[System]
+Name='fuzzy_bencan'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-0.8278 1.8128]
+NumMFs=3
+MF1='mf1':'trimf',[-1.88 -0.828 0.412258201058201]
+MF2='mf2':'trimf',[0.174692592592593 0.597192592592593 0.719192592592593]
+MF3='mf3':'trimf',[0.407287830687831 1.46368783068783 2.51968783068783]
+
+[Input2]
+Name='input2'
+Range=[-0.8717 1.0862]
+NumMFs=3
+MF1='mf1':'trimf',[-1.66 -0.872 -0.00937976190476209]
+MF2='mf2':'trimf',[-0.0974 0.107 0.420485582010582]
+MF3='mf3':'trimf',[0.000978439153438981 1.09 1.87]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=3
+MF1='mfo1':'trimf',[-0.4 0 0.498677248677249]
+MF2='mfo2':'trimf',[0.398148148148148 0.617 0.774]
+MF3='mfo3':'trimf',[0.503968253968254 1 1.4]
+
+[Rules]
+1 1, 1 (1) : 1
+3 1, 1 (1) : 1
+3 2, 1 (1) : 1
+3 3, 1 (1) : 1
+1 3, 3 (1) : 1

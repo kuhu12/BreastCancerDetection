@@ -1,0 +1,11 @@
+fuzzy('DR_PCA.fis');
+f=readfis('DR_PCA.fis');
+c1=test50(:,1);
+c2=test50(:,2);
+c3=test40(:,1);
+c4=test40(:,2);
+c5=test30(:,1);
+c6=test30(:,2);
+im50=evalfis([c1,c2],f);
+im40=evalfis([c3,c4],f);
+im30=evalfis([c5,c6],f);

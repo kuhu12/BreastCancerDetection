@@ -1,0 +1,39 @@
+[System]
+Name='DR_FA'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-0.2822 0.6728]
+NumMFs=2
+MF1='col1_mf1':'gauss2mf',[0.00681 -0.515420634920635 0.00424 -0.0156206349206349]
+MF2='col1_mf2':'gauss2mf',[0.00642 0.00959417989417983 0.00619 0.78289417989418]
+
+[Input2]
+Name='input2'
+Range=[-0.421 0.9842]
+NumMFs=2
+MF1='col2_mf1':'gauss2mf',[0.0103 -0.82671746031746 0.00957 -0.0289233694710286]
+MF2='col2_mf2':'gauss2mf',[0.00629 0.0194952380952382 0.126 1.13769523809524]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='o1':'gauss2mf',[0.0519 -0.0832089947089946 0.00653 0.485291005291005]
+MF2='o2':'gauss2mf',[0.00852 0.5225 0.0322 1.045]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 1, 2 (1) : 1
+2 2, 2 (1) : 1

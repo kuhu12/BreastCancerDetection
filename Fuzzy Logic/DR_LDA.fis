@@ -1,0 +1,39 @@
+[System]
+Name='DR_LDA'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-1.8113 3.6646]
+NumMFs=2
+MF1='col1_mf1':'gauss2mf',[0.0434 -2.16 0.0367 -0.0940680906834602]
+MF2='col1_mf2':'gauss2mf',[0.037 0.108786772486772 0.0181 4.1579693018729]
+
+[Input2]
+Name='input2'
+Range=[-5.06 3.731]
+NumMFs=2
+MF1='col2_mf1':'gauss2mf',[0.108 -5.98789417989418 0.0821 -0.257894179894181]
+MF2='coll2_mf2':'gauss2mf',[0.0863 0.207920634920635 1.19 3.38092063492063]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='o1':'gauss2mf',[0.0247 0.041 0.0094 0.477027583883593]
+MF2='o2':'gauss2mf',[0.00636 0.516708994708995 0.00943 1.08810337269403]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 1, 2 (1) : 1
+2 2, 2 (1) : 1

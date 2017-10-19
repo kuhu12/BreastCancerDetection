@@ -1,0 +1,39 @@
+[System]
+Name='DR_PCA'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-0.75 1.707]
+NumMFs=2
+MF1='col1_mf1':'gauss2mf',[0.0622 -1.837 0.0279 -0.0580000000000001]
+MF2='col1_mf2':'gauss2mf',[0.0148 0.0332999999999999 0.0704 2.1205]
+
+[Input2]
+Name='input2'
+Range=[-0.9012 0.7007]
+NumMFs=2
+MF1='col2_mf1':'gauss2mf',[0.218 -1.25185952380952 0.014 -0.0430595238095238]
+MF2='col2_mf2':'gauss2mf',[0.000496 -7.69834648109233e-05 0.0311 1.66847566137566]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='o1':'gauss2mf',[0.0332 -0.163354497354497 0.00624 0.488045502645503]
+MF2='o2':'gauss2mf',[0.0108 0.530063492063492 0.00982 1.16206349206349]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 2, 2 (1) : 1
+2 1, 2 (1) : 1
